@@ -16,7 +16,7 @@ Name:<br>
 Password:<br>
 <input type="password" name="password" value="">
 <br><br>
-<input type="submit" value="Submit">
+<input type="submit" name = "submit1" value="Submit">
 </form>';
 
 $form2= '<form name="form2" method="get" action="index.php">
@@ -31,7 +31,7 @@ Email:<br>
   <option value="private">Private</option>
 </select>
 <br><br>
-<input type="submit" value="Submit">
+<input type="submit" name = "submit2" value="Submit">
 </form>';
 
 if(isset($_POST["password"])){
@@ -45,7 +45,6 @@ if(isset($_POST["password"])){
       echo $form1;
 }
 if(isset($_GET["value"])){
-    echo $_GET["value"];
     if($_GET["value"]=="public"){
         echo "<br>". $_GET["name"]."<br>";
         echo "<br>".$_GET["email"]."<br>";
